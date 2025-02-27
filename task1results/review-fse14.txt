@@ -1,0 +1,59 @@
+Q1) Key takeway from the paper?
+- By taking an analytical approach where "flaky tests" which are most common in code (e.g 77% of flaky tests fall in the three categories
+of concurrecy, test-order-dependency, and ASYNC Wait) are indeitfied, developers could alleviate, if not resolve, the issues caused by 
+flaky tests through early manifiestation and strategic countering of issues that may arise.
+
+
+Q2) What is the motivation for this work (both people problem and technical problem), and its distillation into a research
+question?
+
+Non-deterministic "flaky tests" are a problematic in the software development field due to amount of time wasted by their un-fixed outcomes
+and diffculty to debug as well as identify. Flaky tests are very common part of code and though somewhat troublesome they do provide
+some converage of the code. "Google had 1.6M test failures on average each day in the past 15 months, and 73K out of 1.6M (4.56%) test
+failures were caused by flaky tests". 
+
+Q3) What is the proposed solution (hypothesis, idea, design)? Why is it believed it will work? How does it represent an
+improvement? How is the solution achieved?'
+
+- By employing an approach such that a subset of a diverse set of software projects is used and the last commit of each flaky test is 
+used to study the issue, the paper groups the flaky tests into various different categories, identify their causes, proposes fixes.
+Through a quantitative percentage evalulation of the number of fixes after proposed solution is implemented, the researchers deduce whether
+their solutions work. For example, "14 out of 19 (74%) Test Order Dependency flaky tests are fixed by setting up or cleaning up the state
+ shared among the tests."
+
+Q4) What is the author’s evaluation of the solution? What logic, argument, evidence, artifacts (e.g., a proof-of-concept
+system), or experiments are presented in support of the idea?
+
+The author provides a very robust methodology for collecting the data of flaky tests in the methodology secition of the paper along with
+reasons as to why results can possibly generalized across many software projects. The evaluation is described in the Q3. 
+
+Q5) What is your analysis of the identified problem, idea and evaluation? Is this a good idea? What flaws do you perceive
+in the work? What are the most interesting or controversial ideas? For work that has practical implications, ask
+whether this will work, who would want it, what it will take to give it to them, and when might it become a reality?
+
+For flaky tests to be identified, a single line cannot be analyzed. Instead, a whole code block that leads up to the line causing flakiness
+needs to be studied. Despite the findings, this can still be hectic, time-consuming and difficult to do. In my opinion, developers would not
+prioritize doing so. Moreover, automating this could be a hustle even if artificial intelligence of today's day and age is used. However,
+the paper's findings would certainly help narrow down on the code that needs to be studied to identify and solve flaky tests fails. Now, another
+point to raise is that the study is obviously limited to a certain number of software project repositories. Considering the vastness of 
+the software testing field, I am quite sure to believe that there are potentially many other types of flaky tests that did not fall under
+the categories derived by this research paper. However, we can almost certainly say (atleast) that the top three categories are most common
+areas of flaky test issues. This work would mainly be useful for those programmers who employ a lot of probability in their software modeling
+proejcts. This is because there is a lot of randomness and approximate assertion tests which are not deterministic. Moreover, developers that
+develop computer systems which run multiple tasks at the same time (concurrency), this would be a useful paper for them to consider.
+
+Q6) What are the paper’s contributions (author’s and your opinion)? Ideas, methods, software, experimental results, experimental techniques...?
+
+This is mostly described in the previous answers. However, for a more quantitative experimental result analysis, the paper section 5.1 provides
+a very direct, "to-the-point" description of the results.
+
+Q7) What are future directions for this research (author’s and yours, perhaps driven by shortcomings or other critiques)?
+Aiming to address and find the "silver-bullet" solution that can address all categories of flaky tests. 
+Using AI to identify flaky tests?
+
+Q8) What questions are you left with? What questions would you like to raise in an open discussion of the work (review
+interesting and controversial points, above)? What do you find difficult to understand? List as many as you can, at
+least three, not including questions that can be answered quickly by searching the internet
+
+- Assuming the developer employs the solutions and approach to identifying and addressing flaky tests in their code, will the process of doing
+so notably save their time or instead make the process more time-consuming such that they would choose ignore these problems.

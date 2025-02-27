@@ -1,0 +1,56 @@
+Q1) Key takeway from the paper?
+Employing theory of probability, statistics, and machine leanring could pave the way for future software generating tools
+like FLASH.
+
+Q2) What is the motivation for this work (both people problem and technical problem), and its distillation into a research
+question?
+
+From the paper:
+. While common wisdom would suggest that many problems with programs dealing with randomness could be solved by simply fixing the seed of
+the random number generator, this paper shows that fixing the seed is not always the best solution. 
+
+Q3) What is the proposed solution (hypothesis, idea, design)? Why is it believed it will work? How does it represent an
+improvement? How is the solution achieved?'
+
+A technique for detecting flaky tests in projects using probabilistic programming systems and machine learning frameworks. FLASH is a framework 
+detecting flaky tests caused by Algorithmic Nondeterminism that focuses on tests with assertions that do approximate comparisons (using 
+developer-specified accuracy thresholds) between actual and expected values in tests. The paper shows that FLASH eventually
+converges inplying that there is always a solution. 
+
+Q4) What is the author’s evaluation of the solution? What logic, argument, evidence, artifacts (e.g., a proof-of-concept
+system), or experiments are presented in support of the idea?
+
+The author provides fixes to professionals for their codes and quantiatively states how many of those fixes were incorporated into
+their software.
+
+Q5) What is your analysis of the identified problem, idea and evaluation? Is this a good idea? What flaws do you perceive
+in the work? What are the most interesting or controversial ideas? For work that has practical implications, ask
+whether this will work, who would want it, what it will take to give it to them, and when might it become a reality?
+
+The paper identified the flaky tests not given much priority to in the previously published paper i.e those tests "that use probabilistic
+programming systems or machine learning frameworks, where the inherent probabilistic nature of such systems can yield a different spectrum
+of reasons for flaky tests in dependent projects, or even new reasons altogether". After doing so, it hypothesized that  that fixing the seed
+is not always the best solution for randomness. Then the paper went on the prove it and quantitatively showed why FLASH always works.
+
+
+
+Q6) What are the paper’s contributions (author’s and your opinion)? Ideas, methods, software, experimental results, experimental techniques...?
+
+The paper presents an empirical study on flaky tests in probabilistic programming and machine learning applications, identifying algorithmic
+ non-determinism as a key cause. It introduces FLASH, a tool for detecting flaky tests caused by randomness in assertions, which uncovered 
+ 11 previously unknown flaky tests across 20 projects. The study categorizes common causes and fixes for flaky tests, emphasizing that
+simply fixing random seeds is insufficient. The findings provide insights for improving test reliability in ML applications, and the 
+open-source dataset and tool contribute to future research in software testing. 
+
+Q7) What are future directions for this research (author’s and yours, perhaps driven by shortcomings or other critiques)?
+- Author's: A new generation of software testing tools (like FLASH) based on the foundations of the theory of probability and statistics
+is necessary to improve the reliability of emerging applications.
+- Mine: Machine learning could potentially be used by training a model based on a dataset of historical flaky tests such that when provided
+code blocks it can predict whether it contains a flaky test or not.
+
+Q8) What questions are you left with? What questions would you like to raise in an open discussion of the work (review
+interesting and controversial points, above)? What do you find difficult to understand? List as many as you can, at
+least three, not including questions that can be answered quickly by searching the internet
+
+FLASH runs on the a threshold of 1.0 and 30 samples in the Geweke diagnostic to check for convergence, However, would this intial
+settings not  possibly affect the output by which convergence is determined?

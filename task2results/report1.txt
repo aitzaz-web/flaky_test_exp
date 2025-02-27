@@ -1,0 +1,37 @@
+Q1) How many assertions found on each project:
+ - "allenai/allennlp": 104 approximate assertions detected
+ - "deepmind/sonnet": 236 approximate assertions detected
+ - "tensorflow/tensor2tensor: 367 approximate assertions detected
+
+ Q2) How did I validate?
+ I randomnly chose a few files from the github and searched each file with approximate assertion keywords. If the files were 
+ chosen randomnly and I tested a few with successful results, I would conclude that it can be generalized across all test files
+ assuming our approximate assertions were defined by the keywords provided in Table 6 in [2].
+
+Q3) Did my tool miss any assertions and why?
+
+Yes my tool did miss on assertions. For example "allennlp/tests/modules/gated_sum_test.py" line 25 contained the following code:
+"numpy.testing.assert_almost_equal(expected.data.numpy(), out.data.numpy(), decimal=5)"
+This is clearly a approximate assertion. However, it was not detected by the tool. Two possibilities are initially drew as to why this was happening
+were:
+- First there was an additional node inside numpy which was numpy.testing and this was different from calls like numpy.assert_almost_equal
+- After careful review of the code structure of gated_sum_test.py, I noticed the assert statement was nested within a "with" block.
+
+For the first conclusion, I noticed that in other files numpy.testing statements were detected. Hence, I was left to test the second conclusion.
+Adding a visit_With function within the finder class, the line was then indentified which confirmed where the error lied.
+
+Conclusion: Just like the above, there may be many more types of nested blocks, which will probably need to be hard-coded for a tool that 
+perfectly finds all approcimate assertions. Addtionally, there needs to be more scrutinty given to instances where additional nodes precede
+our target assert calls such as numpy.testing. 
+
+Q4) Key challenges faced in my implementation?
+
+My intial approach to building this tool was to convert all the python code to a string and loop over each characters in the string to 
+find assert keywords matching with one(s) in a set containing all such commands as in Table 6. However, while doing so, I came across
+multiple issues such as simulateounsly logging test names, line numbers, etc. At the same time, I realized it would be difficult to target
+approximate assertions nested under classes and functions as well as those called by APIs. This was when I adopted the appoach to use the
+AST module as suggested. Having no knowledge of this, I had to go about learning this which did not take long as I understood the way
+it worked through youtube videos. At the same time, with the help of AI to facilitate my learning, I understood that through a recursive approach,
+we could nest deep into the code to find matches with nodes through functions like vist_Call as defined by the AST library making life very
+easy. The challenege here was to understand the efficiency and neatness with which the tool could be implemented by learning how the AST
+module worked. 

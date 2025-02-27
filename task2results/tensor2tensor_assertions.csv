@@ -1,0 +1,368 @@
+filepath,testclass,testname,assertion_type,line_number,assert_string
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,testComputeAreaFeatures1D,assert_allclose,42,"self.assertAllClose((((1, 2), (3, 4), (5, 6), (7, 8), (9, 10), (2, 3), (4, 5), (6, 7), (8, 9), (3, 4), (5, 6), (7, 8)), ((1.1, 2.1), (3.1, 4.1), (5.1, 6.1), (7.1, 8.1), (9.1, 10.1), (2.1, 3.1), (4.1, 5.1), (6.1, 7.1), (8.1, 9.1), (3.1, 4.1), (5.1, 6.1), (7.1, 8.1))), res1, msg='mean_1d')"
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,testComputeAreaFeatures1D,assert_allclose,59,"self.assertAllClose(expected_std, res2, atol=0.01, msg='std_1d')"
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,testComputeAreaFeatures1D,assert_allclose,60,"self.assertAllClose([[[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [4, 6], [8, 10], [12, 14], [16, 18], [9, 12], [15, 18], [21, 24]], [[1.1, 2.1], [3.1, 4.1], [5.1, 6.1], [7.1, 8.1], [9.1, 10.1], [4.2, 6.2], [8.2, 10.2], [12.2, 14.2], [16.2, 18.2], [9.3, 12.3], [15.3, 18.3], [21.3, 24.3]]], res3, msg='sum_1d')"
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,testComputeAreaFeatures2D,assert_allclose,112,"self.assertAllClose(expected_means, res1, msg='mean_1d')"
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,testComputeAreaFeatures2D,assert_allclose,161,"self.assertAllClose(expected_sums, res3, msg='sum_1d')"
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,testAreaMean,assert_false,194,self.assertFalse(np.any(np.logical_not(np.isfinite(result))))
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,test2DAreaMax,assert_false,227,self.assertFalse(np.any(np.logical_not(np.isfinite(result1))))
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,test2DAreaMax,assert_false,228,self.assertFalse(np.any(np.logical_not(np.isfinite(result2))))
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,test1DAreaMax,assert_false,272,self.assertFalse(np.any(np.logical_not(np.isfinite(result1))))
+tensor2tensor/tensor2tensor/layers/area_attention_test.py,AreaAttentionTest,test1DAreaMax,assert_false,273,self.assertFalse(np.any(np.logical_not(np.isfinite(result2))))
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_ops_test.py,TransformerFlowOpsTest,test_dense_weightnorm,assert_true,99,"self.assertTrue(np.allclose(mean, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_ops_test.py,TransformerFlowOpsTest,test_dense_weightnorm,assert_true,100,"self.assertTrue(np.allclose(var, 1.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_actnorm,assert_true,135,"self.assertTrue(np.allclose(x_mean, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_actnorm,assert_true,136,"self.assertTrue(np.allclose(x_var, 1.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_actnorm_invertibility,assert_true,155,"self.assertTrue(np.allclose(diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_actnorm_invertibility,assert_true,156,"self.assertTrue(np.allclose(logabsdet_sum, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_multi_1x1_invertibility,assert_true,178,"self.assertTrue(np.allclose(diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_multi_1x1_invertibility,assert_true,179,"self.assertTrue(np.allclose(logabsdet_, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_multi_1x1_invertibility,assert_true,180,"self.assertTrue(np.allclose(logabsdet_sum, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_coupling_invertibility,assert_true,209,"self.assertTrue(np.allclose(diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_coupling_invertibility,assert_true,210,"self.assertTrue(np.allclose(logabsdet_sum, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_split,assert_true,228,"self.assertTrue(np.allclose(diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_split,assert_true,229,"self.assertTrue(np.allclose(log_p_diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_flow_invertibility,assert_true,248,"self.assertTrue(np.allclose(diff, 0.0, atol=2e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_flow_invertibility,assert_true,249,"self.assertTrue(np.allclose(logabsdet_sum, 0.0, atol=7e-05))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_aaa_glow_training,assert_true,324,"self.assertTrue(np.allclose(diff, 0.0, atol=0.0001), msg=np.max(np.abs(diff)))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_aaa_glow_training,assert_true,326,"self.assertTrue(np.allclose(log_ps_diff, 0.0, atol=0.0001), msg=np.max(np.abs(log_ps_diff)))"
+tensor2tensor/tensor2tensor/layers/transformer_glow_layers_test.py,TransformerGlowLayersTest,test_aaa_glow_training,assert_true,328,"self.assertTrue(np.allclose(logabsdets_sum, 0.0, atol=0.0001), msg=np.max(np.abs(logabsdets_sum)))"
+tensor2tensor/tensor2tensor/layers/latent_layers_test.py,LatentLayersTest,testComputeBitsAndNats,assert_allclose,109,"self.assertAllClose(nats_per_dim_py, bits_per_dim_conv_py)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testAttentionBiasLocal,assert_allclose,55,"self.assertAllClose(res, expected_res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testHardenAttentionAllZeros,assert_allclose,93,"self.assertAllClose(res, x)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testAddTimingSignalsGivenPositions,assert_allclose,118,"self.assertAllClose(common_attention.add_timing_signals_given_positions(x, [x_positions, y_positions]), tf.constant([[[math.sin(0), math.sin(0 * 0.0001), math.cos(0), math.cos(0 * 0.0001), math.sin(4), math.sin(4 * 0.0001), math.cos(4), math.cos(4 * 0.0001)], [math.sin(1), math.sin(1 * 0.0001), math.cos(1), math.cos(1 * 0.0001), math.sin(5), math.sin(5 * 0.0001), math.cos(5), math.cos(5 * 0.0001)], [math.sin(2), math.sin(2 * 0.0001), math.cos(2), math.cos(2 * 0.0001), math.sin(6), math.sin(6 * 0.0001), math.cos(6), math.cos(6 * 0.0001)], [math.sin(3), math.sin(3 * 0.0001), math.cos(3), math.cos(3 * 0.0001), math.sin(7), math.sin(7 * 0.0001), math.cos(7), math.cos(7 * 0.0001)]]]))"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testRightShiftBlockwiseND,assert_allclose,238,"self.assertAllClose(expected_val, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,softmax,assert_allclose,292,"self.assertAllClose(expected_val, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testSelectBlockForDecodeStep,assert_allclose,302,"self.assertAllClose(expected_value, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testFlattenBlocksND,assert_allclose,313,"self.assertAllClose(res.shape, (shape[0], np.prod(shape[1:-2]), shape[-2], shape[-1]))"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testUnflattenBlocksND,assert_allclose,325,"self.assertAllClose(res.shape, (2,) + blocks_per_dim + (6, 10))"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testBreakIntoMemoryBlocksND,assert_allclose,362,"self.assertAllClose(expected_value, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testBreakIntoBlocksND,assert_allclose,379,"self.assertAllClose(expected_value, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testPutBackBlocksND,assert_allclose,396,"self.assertAllClose(expected_value, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testPadToMultipleND,assert_allclose,407,"self.assertAllClose(res.shape, expected_shape)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testCausalAttentionBiasND,assert_allclose,419,"self.assertAllClose(expected_val, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadAttentionND,assert_allclose,439,"self.assertAllClose(res.shape, tensor_shape[:-1] + (256,))"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testDecodeStepToIndex,assert_allclose,450,"self.assertAllClose(res, expected_index)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGetItemAtDecodeStep,assert_allclose,458,"self.assertAllClose(expected_value, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testPutItemAtDecodeStep,assert_allclose,468,"self.assertAllClose(expected_val, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadSelfAttentionMemoryEfficient,assert_allclose,631,"self.assertAllClose(y, y_forget)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadSelfAttentionMemoryEfficient,assert_allclose,632,"self.assertAllClose(dwo, dwo_f)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadSelfAttentionMemoryEfficient,assert_allclose,633,"self.assertAllClose(dwqkv, dwqkv_f)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadSelfAttentionMemoryEfficient,assert_allclose,634,"self.assertAllClose(dnorm_scale, dnorm_scale_f)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadSelfAttentionMemoryEfficient,assert_allclose,635,"self.assertAllClose(dnorm_bias, dnorm_bias_f)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testMultiheadSelfAttentionMemoryEfficient,assert_allclose,636,"self.assertAllClose(dx, dx_f)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,test2dGatherAndScatterInvertibility,assert_allclose,655,"self.assertAllClose(x, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,test2dBlockRasterScanMask,assert_allclose,678,"self.assertAllClose(correct_mask, res)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,test2dGather,assert_allclose,717,"self.assertAllClose(correct_gathered_x, gathered_x)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGetMemoryRegion,assert_allclose,793,"self.assertAllClose(correct_x_flange, x_flange)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGetMemoryRegion,assert_allclose,794,"self.assertAllClose(correct_x_center, x_center)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGetShiftedCenterBlocks,assert_allclose,859,"self.assertAllClose(correct_gathered_x, gathered_x)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testExtractblocks,assert_allclose,965,"self.assertAllClose(res, out)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGet2dLocalMemory,assert_allclose,1026,"self.assertAllClose(res, out)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testSplitAlongWidth,assert_allclose,1069,"self.assertAllClose(res_l, out_l)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testSplitAlongWidth,assert_allclose,1070,"self.assertAllClose(res_r, out_r)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGetLeftRightBlocks,assert_allclose,1124,"self.assertAllClose(res_l, out_l)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testGetLeftRightBlocks,assert_allclose,1125,"self.assertAllClose(res_r, out_r)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testDotProductUnmaskedAttentionLocal2dTpu,assert_allclose,1212,"self.assertAllClose(res, out)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testDotProductUnmaskedAttentionLocal2dTpuSimple,assert_allclose,1280,"self.assertAllClose(res, out)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testDotProductUnMaskedAttentionRelative2d,assert_allclose,1378,"self.assertAllClose(res, att_output)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testDotProductUnMaskedAttentionRelative2dSharedOneRow,assert_allclose,1413,"self.assertAllClose(res, att_output)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testBiasBatchCoordinates,assert_allclose,1557,"self.assertAllClose(self.evaluate(bias), ground_truth)"
+tensor2tensor/tensor2tensor/layers/common_attention_test.py,CommonAttentionTest,testBiasFuture,assert_allclose,1581,"self.assertAllClose(self.evaluate(bias), ground_truth)"
+tensor2tensor/tensor2tensor/layers/common_video_test.py,CommonVideoTest,testScheduledSampleProbMid,assert_almost_equal,54,"self.assertAlmostEqual(positive_count / 1000.0, 0.5, places=1)"
+tensor2tensor/tensor2tensor/layers/common_video_test.py,CommonVideoTest,testGifSummary,assert_true,124,self.assertTrue(summary.value[0].HasField('image'))
+tensor2tensor/tensor2tensor/layers/common_video_test.py,CommonVideoTest,check_if_patch_exists,assert_true,137,self.assertTrue(np.any(is_present))
+tensor2tensor/tensor2tensor/layers/common_video_test.py,CommonVideoTest,testExtractRandomVideoPatch,assert_true,166,"self.assertTrue(np.allclose(video_np, video_patch_np))"
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testIntToBitZeros,assert_true,59,self.assertTrue(np.all(d == 0))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testIntToBitOnes,assert_true,67,self.assertTrue(np.all(d == 0))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testProjectHidden,assert_true,81,self.assertTrue(np.all(x_projected_eval == 0))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testSliceHiddenZeros,assert_true,92,self.assertTrue(np.all(x_sliced_eval == 0))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testSliceHiddenOnes,assert_true,103,self.assertTrue(np.all(x_sliced_eval == 1))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testNearestNeighbors,assert_true,118,self.assertTrue(np.all(x_means_hot_eval == x_means_hot_test))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testGetVQBottleneck,assert_true,133,self.assertTrue(np.all(sess.run(means_new) == 0))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testGetVQBottleneck,assert_true,134,self.assertTrue(np.all(sess.run(ema_count) == 0))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testVQNearestNeighbors,assert_true,145,self.assertTrue(np.all(x_means_hot_eval == x_means_hot_test))
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testDiscreteBottleneckVQ,assert_true,203,"self.assertTrue(np.all(means_eval == np.zeros((1, 1, 2 ** z_size, hidden_size))))"
+tensor2tensor/tensor2tensor/layers/discretization_test.py,DiscretizationTest,testDiscreteBottleneckVQCond,assert_allclose,240,"self.assertAllClose(means_eval, np.zeros((1, 1, 2 ** z_size, hidden_size)))"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testSaturatingSigmoid,assert_allclose,51,"self.assertAllClose(res, [0.0, 0.0, 0.5, 1.0, 1.0])"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testShakeShake,assert_allclose,76,"self.assertAllClose(res, inp)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testApplyNormNone,assert_allclose,314,"self.assertAllClose(actual, x1, atol=0.001)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testNALUzeros,assert_true,431,self.assertTrue(np.all(np.isfinite(actual)))
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testPaddingCrossEntropyFactored,assert_allclose,465,"self.assertAllClose(num, num_f)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testPaddingCrossEntropyFactored,assert_allclose,466,"self.assertAllClose(den, den_f)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testPaddingCrossEntropyFactoredGrad,assert_allclose,503,"self.assertAllClose(actual_df, actual_df_factored)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testPaddingCrossEntropyFactoredGrad,assert_allclose,504,"self.assertAllClose(actual_dw, actual_dw_factored)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testDmlLoss,assert_allclose,529,"self.assertAllClose(actual_loss_val, expected_loss_val)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testWeightsMultiProblemAll,assert_allclose,546,"self.assertAllClose(expected_mask, actual_mask_eval)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testWeightsMultiProblem,assert_allclose,563,"self.assertAllClose(expected_mask, actual_mask_eval)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testDiscretizedMixLogisticLoss,assert_allclose,600,"self.assertAllClose(actual_loss_val, expected_loss_val, rtol=1e-05)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testSampleFromDiscretizedMixLogistic,assert_allclose,628,"self.assertAllClose(actual_sample_val, expected_sample_val, atol=0.01)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testConvHiddenReluMemoryEfficient,assert_allclose,673,"self.assertAllClose(y, y_forget)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testConvHiddenReluMemoryEfficient,assert_allclose,674,"self.assertAllClose(df2, df2_f, rtol=2e-06, atol=2e-06)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testConvHiddenReluMemoryEfficient,assert_allclose,675,"self.assertAllClose(df1, df1_f, rtol=2e-06, atol=2e-06)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testConvHiddenReluMemoryEfficient,assert_allclose,676,"self.assertAllClose(dnorm_scale, dnorm_scale_f)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testConvHiddenReluMemoryEfficient,assert_allclose,677,"self.assertAllClose(dnorm_bias, dnorm_bias_f)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testConvHiddenReluMemoryEfficient,assert_allclose,678,"self.assertAllClose(dx, dx_f)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,CommonLayersTest,testSpectralNorm,assert_true,838,"self.assertTrue(np.allclose(s[0], 1.0, rtol=0.1))"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,FnWithCustomGradTest,grad_fn,assert_allclose,885,"self.assertAllClose(out_val, custom_out_val)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,FnWithCustomGradTest,grad_fn,assert_allclose,887,"self.assertAllClose(g1, g2)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,FnWithCustomGradTest,grad_fn,assert_allclose,917,"self.assertAllClose(g1, g2)"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,RecomputeTest,fn_recompute,assert_allclose,963,"self.assertAllClose(outs[0], outs[1])"
+tensor2tensor/tensor2tensor/layers/common_layers_test.py,RecomputeTest,fn_recompute,assert_allclose,965,"self.assertAllClose(g1, g2)"
+tensor2tensor/tensor2tensor/utils/trainer_lib_test.py,TrainerLibTest,testModel,assert_true,92,self.assertTrue('training' in losses)
+tensor2tensor/tensor2tensor/utils/trainer_lib_test.py,TrainerLibTest,body,assert_true,142,self.assertTrue('training' in losses)
+tensor2tensor/tensor2tensor/utils/rouge_test.py,TestRouge2Metric,testRouge2Identical,assert_allclose,35,"self.assertAllClose(rouge.rouge_n(hypotheses, references), 1.0, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/rouge_test.py,TestRouge2Metric,testRouge2PartialOverlap,assert_allclose,49,"self.assertAllClose(rouge.rouge_n(hypotheses, references), 0.53, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/rouge_test.py,TestRougeLMetric,testRougeLIdentical,assert_allclose,60,"self.assertAllClose(rouge.rouge_l_sentence_level(hypotheses, references), 1.0, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/rouge_test.py,TestRougeLMetric,testRougeLPartialOverlap,assert_allclose,75,"self.assertAllClose(rouge.rouge_l_sentence_level(hypotheses, references), 0.837, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/video_metrics_test.py,VideoMetricsTest,test_reduce_to_best_decode,assert_true,53,"self.assertTrue(np.allclose(best_decode, exp_best_decode))"
+tensor2tensor/tensor2tensor/utils/video_metrics_test.py,VideoMetricsTest,test_reduce_to_best_decode,assert_true,54,"self.assertTrue(np.allclose(worst_decode, exp_worst_decode))"
+tensor2tensor/tensor2tensor/utils/video_metrics_test.py,VideoMetricsTest,test_reduce_to_best_decode,assert_true,55,"self.assertTrue(np.allclose(best_decode_ind, [0, 1, 1]))"
+tensor2tensor/tensor2tensor/utils/video_metrics_test.py,VideoMetricsTest,test_reduce_to_best_decode,assert_true,56,"self.assertTrue(np.allclose(worst_decode_ind, [1, 0, 0]))"
+tensor2tensor/tensor2tensor/utils/hparam_test.py,HParamsTest,testContains,assert_true,39,self.assertTrue('foo' in hparams)
+tensor2tensor/tensor2tensor/utils/hparam_test.py,HParamsTest,testContains,assert_false,40,self.assertFalse('bar' in hparams)
+tensor2tensor/tensor2tensor/utils/metrics_hook_test.py,MetricsHookTest,testStop,assert_true,85,self.assertTrue('' in dummy.test_metrics)
+tensor2tensor/tensor2tensor/utils/metrics_hook_test.py,MetricsHookTest,testStop,assert_true,87,self.assertTrue('global_step_1' in metrics)
+tensor2tensor/tensor2tensor/utils/metrics_hook_test.py,MetricsHookTest,testStop,assert_true,89,self.assertTrue(len(steps) == len(vals))
+tensor2tensor/tensor2tensor/utils/metrics_hook_test.py,MetricsHookTest,testStop,assert_true,90,self.assertTrue(len(steps) >= 2)
+tensor2tensor/tensor2tensor/utils/metrics_hook_test.py,MetricsHookTest,testPlateauOpHook,assert_true,182,self.assertTrue(sess.run(indicator) < 1)
+tensor2tensor/tensor2tensor/utils/metrics_hook_test.py,MetricsHookTest,testPlateauOpHook,assert_true,192,self.assertTrue(sess.run(indicator) > 1)
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testAccuracyMetric,assert_almost_equal,40,"self.assertAlmostEqual(actual, expected)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testAccuracyTopKMetric,assert_almost_equal,56,"self.assertAlmostEqual(actual1, expected)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testAccuracyTopKMetric,assert_almost_equal,57,"self.assertAlmostEqual(actual2, 1.0)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testPrefixAccuracy,assert_almost_equal,77,"self.assertAlmostEqual(expected_accuracy, accuracy_value)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testTwoClassAccuracyMetric,assert_almost_equal,102,"self.assertAlmostEqual(actual, expected)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testTwoClassLogLikelihood,assert_almost_equal,112,"self.assertAlmostEqual(actual, expected)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,alt_two_class_log_likelihood_impl,assert_almost_equal,135,"self.assertAlmostEqual(new_impl, alt_impl)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testSequenceEditDistanceMetric,assert_almost_equal,181,"self.assertAlmostEqual(actual_scores, 3.0 / 13)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testWordErrorRateMetric,assert_almost_equal,218,"self.assertAlmostEqual(round(actual_wer, places), expected_wer, places)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testSigmoidCrossEntropyOneHot,assert_almost_equal,371,"self.assertAlmostEqual(s, 0.688, places=3)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testRocAuc,assert_almost_equal,394,"self.assertAlmostEqual(s, 0.75, places=3)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testMultilabelMatch3,assert_almost_equal,416,"self.assertAlmostEqual(actual, expected, places=6)"
+tensor2tensor/tensor2tensor/utils/metrics_test.py,MetricsTest,testPearsonCorrelationCoefficient,assert_almost_equal,430,"self.assertAlmostEqual(actual, expected)"
+tensor2tensor/tensor2tensor/utils/sari_hook_test.py,SariHookTest,testSariSent1,assert_almost_equal,51,"self.assertAlmostEqual(0.269536, score)"
+tensor2tensor/tensor2tensor/utils/sari_hook_test.py,SariHookTest,testSariSent2,assert_almost_equal,58,"self.assertAlmostEqual(0.6170966, score)"
+tensor2tensor/tensor2tensor/utils/sari_hook_test.py,SariHookTest,testSariSent3,assert_almost_equal,65,"self.assertAlmostEqual(0.5088682, score)"
+tensor2tensor/tensor2tensor/utils/sari_hook_test.py,SariHookTest,testKeepScore,assert_almost_equal,102,"self.assertAlmostEqual(6.0 / 15, score)"
+tensor2tensor/tensor2tensor/utils/diet_test.py,DietVarTest,model_fn2,assert_allclose,60,"self.assertAllClose(old, new)"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,testComputeTopkScoresAndSeq,assert_allclose,75,"self.assertAllClose(exp_scores, topk_scores)"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,symbols_to_logits,assert_allclose,130,"self.assertAllClose([[0.7 * 0.6]], np.exp(probs))"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,symbols_to_logits,assert_allclose,167,"self.assertAllClose([0.8 * 0.5], np.exp(first_probs))"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,symbols_to_logits,assert_allclose,201,"self.assertAllClose([[0.8 * 0.5, 0.8 * 0.4 * 0.9]], np.exp(probs))"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,symbols_to_logits,assert_allclose,230,"self.assertAllClose([[0.7 * 0.5]], np.exp(probs))"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,symbols_to_logits,assert_allclose,271,"self.assertAllClose([[np.log(0.8 * 0.4 * 0.9) / (8.0 / 6.0) ** 3.5, np.log(0.8 * 0.5) / (7.0 / 6.0) ** 3.5], [np.log(0.8 * 0.6) / (7.0 / 6.0) ** 3.5, np.log(0.8 * 0.3 * 0.9) / (8.0 / 6.0) ** 3.5]], scores)"
+tensor2tensor/tensor2tensor/utils/beam_search_test.py,BeamSearchTest,symbols_to_logits,assert_allclose,312,"self.assertAllClose([[np.log(0.8 * 0.4 * 0.9) / (8.0 / 6.0) ** 3.5, np.log(0.8 * 0.5) / (7.0 / 6.0) ** 3.5]], scores)"
+tensor2tensor/tensor2tensor/utils/t2t_model_test.py,T2TModelTest,testLossSingleWeights,assert_allclose,71,"self.assertAllClose(tf.zeros_like(loss_num), sess.run(loss_num))"
+tensor2tensor/tensor2tensor/utils/t2t_model_test.py,T2TModelTest,testLossSingleWeights,assert_allclose,72,"self.assertAllClose(tf.zeros_like(loss_denom), sess.run(loss_denom))"
+tensor2tensor/tensor2tensor/utils/t2t_model_test.py,T2TModelTest,testLossSingleWeights,assert_allclose,79,"self.assertAllClose(batch_size * sequence_size, sess.run(loss_denom))"
+tensor2tensor/tensor2tensor/utils/expert_utils_test.py,ExpertUtilsTest,_verify_value,assert_allclose,30,"self.assertAllClose(output, expected, 1e-09)"
+tensor2tensor/tensor2tensor/utils/bleu_hook_test.py,BleuHookTest,testComputeNotEqual,assert_allclose,48,"self.assertAllClose(bleu, actual_bleu, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/bleu_hook_test.py,BleuHookTest,testComputeMultipleBatch,assert_allclose,55,"self.assertAllClose(bleu, actual_bleu, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/bleu_hook_test.py,BleuHookTest,testComputeMultipleNgrams,assert_allclose,62,"self.assertAllClose(bleu, actual_bleu, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/bleu_hook_test.py,BleuHookTest,testBleuWrapper,assert_allclose,95,"self.assertAllClose(bleu, actual_bleu, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/bleu_hook_test.py,BleuHookTest,testBleuWrapperWithUnicodeLineSeparator,assert_allclose,103,"self.assertAllClose(bleu, actual_bleu, atol=0.001)"
+tensor2tensor/tensor2tensor/utils/registry_test.py,RegistryClassTest,testMembership,assert_true,57,self.assertTrue('a' in r)
+tensor2tensor/tensor2tensor/utils/registry_test.py,RegistryClassTest,testMembership,assert_true,58,self.assertTrue('b' in r)
+tensor2tensor/tensor2tensor/utils/registry_test.py,,testT2TModelRegistration,assert_true,135,self.assertTrue(model is MyModel1)
+tensor2tensor/tensor2tensor/utils/registry_test.py,,testNamedRegistration,assert_true,144,self.assertTrue(model is MyModel1)
+tensor2tensor/tensor2tensor/utils/registry_test.py,,model_fn,assert_true,153,self.assertTrue(model is model_fn)
+tensor2tensor/tensor2tensor/utils/registry_test.py,OptimizerRegistryTest,another_optimizer,assert_true,211,self.assertTrue('my_optimizer' in registry.Registries.optimizers)
+tensor2tensor/tensor2tensor/utils/registry_test.py,OptimizerRegistryTest,another_optimizer,assert_true,212,self.assertTrue('my_other_optimizer' in registry.Registries.optimizers)
+tensor2tensor/tensor2tensor/utils/registry_test.py,OptimizerRegistryTest,another_optimizer,assert_false,213,self.assertFalse('another_optimizer' in registry.Registries.optimizers)
+tensor2tensor/tensor2tensor/utils/registry_test.py,HParamRegistryTest,my_hparams_range,assert_true,273,self.assertTrue(registry.ranged_hparams('my_hparams_range') is my_hparams_range)
+tensor2tensor/tensor2tensor/utils/registry_test.py,HParamRegistryTest,my_hparams_range,assert_true,287,self.assertTrue(registry.ranged_hparams('a') is my_hparams_range)
+tensor2tensor/tensor2tensor/utils/registry_test.py,RegistryHelpTest,testRegistryHelp,assert_greater,369,"self.assertGreater(len(help_str), 0)"
+tensor2tensor/tensor2tensor/utils/data_reader_test.py,DataReaderTest,testBasicExampleReading,assert_greater,113,"self.assertGreater(len(field), 0)"
+tensor2tensor/tensor2tensor/utils/data_reader_test.py,DataReaderTest,testPreprocess,assert_allclose,124,"self.assertAllClose([42.42], ex_val['new_field'])"
+tensor2tensor/tensor2tensor/utils/data_reader_test.py,DataReaderTest,testBatchingSchemeMaxLength,assert_greater,149,"self.assertGreater(scheme['max_length'], 10000)"
+tensor2tensor/tensor2tensor/utils/data_reader_test.py,DataReaderTest,testBatchingSchemeMaxLength,assert_greater,173,"self.assertGreater(scheme['max_length'], 10000)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerTest,testSlowVsFast,assert_allclose,168,"self.assertAllClose(greedy_res, fast_res)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerTest,testSlowVsFastNoInput,assert_allclose,203,"self.assertAllClose(slow_res, fast_res)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerTest,testBeamVsFast,assert_allclose,262,"self.assertAllClose(beam_res, fast_res)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerTest,testGreedySlowTPUVsNonTPU,assert_allclose,343,"self.assertAllClose(slow_tpu_res, slow_non_tpu_res)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerTest,testGreedyFastTPUVsNonTPU,assert_allclose,363,"self.assertAllClose(fast_tpu_res, fast_non_tpu_res)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerTest,testGreedyTPUSlowVsFast,assert_allclose,384,"self.assertAllClose(fast_res, slow_res)"
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerScorerTest,testReturnsScores,assert_true,394,self.assertTrue('outputs' in infer_out)
+tensor2tensor/tensor2tensor/models/transformer_test.py,TransformerScorerTest,testReturnsScores,assert_true,395,self.assertTrue('scores' in infer_out)
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testSlowVsFast,assert_allclose,139,"self.assertAllClose(greedy_res, fast_res)"
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testSlowVsFastNoInput,assert_allclose,172,"self.assertAllClose(slow_res, fast_res)"
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testBeamVsFast,assert_allclose,207,"self.assertAllClose(beam_res, fast_res)"
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testGreedySlowTPUVsNonTPU,assert_allclose,255,"self.assertAllClose(slow_tpu_res, slow_non_tpu_res)"
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testGreedyFastTPUVsNonTPU,assert_allclose,276,"self.assertAllClose(fast_tpu_res, fast_non_tpu_res)"
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testGreedyTPUSlowVsFast,assert_allclose,297,"self.assertAllClose(fast_res, slow_res)"
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testFrozenWeightsUnchangedByTraining,assert_true,512,self.assertTrue(model._original_hparams.shared_embedding_and_softmax_weights)
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testFrozenWeightsUnchangedByTraining,assert_false,514,self.assertFalse(model.hparams.shared_embedding_and_softmax_weights)
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testFrozenWeightsUnchangedByTraining,assert_true,515,self.assertTrue(model.hparams.shared_embedding)
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testAllWeightsTrainableByDefault,assert_true,731,self.assertTrue(model._original_hparams.shared_embedding_and_softmax_weights)
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testAllWeightsTrainableByDefault,assert_true,733,self.assertTrue(model.hparams.shared_embedding_and_softmax_weights)
+tensor2tensor/tensor2tensor/models/evolved_transformer_test.py,EvolvedTransformerTest,testAllWeightsTrainableByDefault,assert_false,734,self.assertFalse(model.hparams.shared_embedding)
+tensor2tensor/tensor2tensor/models/research/glow_test.py,GlowModelTest,test_glow,assert_true,76,self.assertTrue(mean_obj > 0 and mean_obj < 10.0)
+tensor2tensor/tensor2tensor/models/research/glow_test.py,GlowModelTest,test_glow_inference,assert_true,106,self.assertTrue(not is_undefined)
+tensor2tensor/tensor2tensor/models/research/glow_test.py,GlowModelTest,test_glow_inference,assert_true,125,self.assertTrue(np.all(predictions_np <= 255))
+tensor2tensor/tensor2tensor/models/research/glow_test.py,GlowModelTest,test_glow_inference,assert_true,126,self.assertTrue(np.all(predictions_np >= 0))
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralStackCellTest,test_push_pop,assert_allclose,178,"self.assertAllClose(expected_values, values)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralStackCellTest,test_push_pop,assert_allclose,179,"self.assertAllClose(expected_write_strengths, write_strengths)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralStackCellTest,test_push_pop,assert_allclose,180,"self.assertAllClose(expected_read_strengths, read_strengths)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralStackCellTest,test_push_pop,assert_allclose,181,"self.assertAllClose(expected_top, stack_top)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralQueueCellTest,test_enqueue_dequeue,assert_allclose,245,"self.assertAllClose(expected_values, values)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralQueueCellTest,test_enqueue_dequeue,assert_allclose,246,"self.assertAllClose(expected_write_strengths, write_strengths)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralQueueCellTest,test_enqueue_dequeue,assert_allclose,247,"self.assertAllClose(expected_read_strengths, read_strengths)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralQueueCellTest,test_enqueue_dequeue,assert_allclose,248,"self.assertAllClose(expected_front, queue_front)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralDequeCellTest,test_enqueue_dequeue,assert_allclose,386,"self.assertAllClose(expected_values, memory_values)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralDequeCellTest,test_enqueue_dequeue,assert_allclose,387,"self.assertAllClose(expected_write_strengths, write_strengths)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralDequeCellTest,test_enqueue_dequeue,assert_allclose,388,"self.assertAllClose(expected_read_strengths, read_strengths)"
+tensor2tensor/tensor2tensor/models/research/neural_stack_test.py,NeuralDequeCellTest,test_enqueue_dequeue,assert_allclose,389,"self.assertAllClose(expected_read_values, read_values)"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_get_variable_ddi,assert_true,67,"self.assertTrue(np.allclose(session.run(diff), 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_actnorm,assert_true,78,"self.assertTrue(np.allclose(channel_mean, 0.0, atol=0.001))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_actnorm,assert_true,79,"self.assertTrue(np.allclose(channel_var, 1.0, atol=0.001))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_invertibility,assert_true,103,"self.assertTrue(np.allclose(diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_conv2d,assert_true,134,"self.assertTrue(np.allclose(mean, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_conv2d,assert_true,135,"self.assertTrue(np.allclose(var, 1.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_conv_stack,assert_true,155,"self.assertTrue(np.allclose(nn_np, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,check_latent_to_dist,assert_true,169,"self.assertTrue(np.allclose(mean, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,check_latent_to_dist,assert_true,170,"self.assertTrue(np.allclose(scale, 1.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_split,assert_true,186,"self.assertTrue(np.allclose(diff, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_revnet_reversibility,assert_true,204,"self.assertTrue(np.allclose(diff, 0.0, atol=0.01))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_encoder_decoder,assert_true,234,"self.assertTrue(x_inv_np.shape, (1, 8, 8, 64))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_encoder_decoder,assert_true,235,"self.assertTrue(np.allclose(diff, 0.0, atol=0.01))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_encoder_decoder_practical_usage,assert_true,283,"self.assertTrue(np.allclose(diff, 0.0, atol=0.001))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_scale_gaussian_prior,assert_true,298,"self.assertTrue(np.allclose(mean, z_rand))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_scale_gaussian_prior,assert_true,299,"self.assertTrue(np.allclose(scale, 1.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,check_split_latent_conditioning,assert_true,326,"self.assertTrue(np.allclose(diff_np, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,check_split_latent_conditioning,assert_true,327,"self.assertTrue(np.allclose(actual_eps, exp_eps))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,check_split_latent_conditioning,assert_true,328,"self.assertTrue(np.allclose(exp_x2, actual_x2))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_latent_dist_encoder,assert_true,379,"self.assertTrue(np.allclose(latent_rand - mean, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_latent_dist_encoder,assert_true,381,"self.assertTrue(np.allclose(mean, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_latent_dist_encoder,assert_true,382,"self.assertTrue(np.allclose(scale, 1.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_latent_dist_encoder,assert_false,387,"self.assertFalse(np.allclose(state_diff, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_conv3d,assert_true,411,"self.assertTrue(np.allclose(mean, 0.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_conv3d,assert_true,412,"self.assertTrue(np.allclose(var, 1.0, atol=1e-05))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_conv3d,assert_true,415,"self.assertTrue(np.allclose(conv3d_zeros_np, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_actnorm_3d,assert_true,430,"self.assertTrue(np.allclose(channel_mean, 0.0, atol=0.001))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_actnorm_3d,assert_true,431,"self.assertTrue(np.allclose(channel_var, 1.0, atol=0.001))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_temporal_latent_to_dist,assert_true,460,"self.assertTrue(np.allclose(mean_np, 0.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_temporal_latent_to_dist,assert_true,461,"self.assertTrue(np.allclose(scale_np, 1.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_temperature_normal,assert_true,484,"self.assertTrue(np.allclose(loc_exp, loc_act, atol=0.01))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,test_temperature_normal,assert_true,485,"self.assertTrue(np.allclose(scale_exp, scale_act, atol=0.01))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,linear_interpolate_rank,assert_true,506,"self.assertTrue(np.allclose(lin_interp_np[:, :, 0], 1.0))"
+tensor2tensor/tensor2tensor/models/research/glow_ops_test.py,GlowOpsTest,linear_interpolate_rank,assert_true,507,"self.assertTrue(np.allclose(lin_interp_np[:, :, 1], exp_val))"
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelInfer,assert_true,165,"self.assertTrue(isinstance(output, dict))"
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelInfer,assert_true,166,self.assertTrue('outputs' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelInfer,assert_true,167,self.assertTrue('scores' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelInfer,assert_true,168,self.assertTrue('targets' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionsInfer,assert_true,203,"self.assertTrue(isinstance(output, dict))"
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionsInfer,assert_true,204,self.assertTrue('outputs' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionsInfer,assert_true,205,self.assertTrue('scores' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionsInfer,assert_true,206,self.assertTrue('targets' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionAndRewardsInfer,assert_true,248,"self.assertTrue(isinstance(output, dict))"
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionAndRewardsInfer,assert_true,249,self.assertTrue('outputs' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionAndRewardsInfer,assert_true,250,self.assertTrue('scores' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionAndRewardsInfer,assert_true,251,self.assertTrue('targets' in output.keys())
+tensor2tensor/tensor2tensor/models/video/tests_utils.py,BaseNextFrameTest,TestVideoModelWithActionAndRewardsInfer,assert_true,252,self.assertTrue('target_reward' in output.keys())
+tensor2tensor/tensor2tensor/models/video/nfg_test_utils.py,NextFrameGlowTest,RunModel,assert_true,128,self.assertTrue(loss > 0.0 and loss < 10.0)
+tensor2tensor/tensor2tensor/models/video/nfg_test_utils.py,NextFrameGlowTest,GlowTrainAndDecode,assert_true,180,self.assertTrue(np.all(outputs_np <= 255))
+tensor2tensor/tensor2tensor/models/video/nfg_test_utils.py,NextFrameGlowTest,GlowTrainAndDecode,assert_true,181,self.assertTrue(np.all(outputs_np >= 0))
+tensor2tensor/tensor2tensor/models/neural_architecture_search/nas_layers_test.py,LayersTest,test_decoder_layer,assert_allclose,305,"self.assertAllClose(control_output[:, :test_index + 1], variable_output[:, :test_index + 1], rtol=1)"
+tensor2tensor/tensor2tensor/models/neural_architecture_search/nas_layers_test.py,LayersTest,test_decoder_layer,assert_allclose,313,"self.assertAllClose(control_output[:, test_index + 1:], variable_output[:, test_index + 1:], rtol=1)"
+tensor2tensor/tensor2tensor/envs/time_step_test.py,TimeStepTest,test_create_time_step,assert_true,35,self.assertTrue(ts.done)
+tensor2tensor/tensor2tensor/envs/time_step_test.py,TimeStepTest,test_replace,assert_false,43,self.assertFalse(ts.done)
+tensor2tensor/tensor2tensor/envs/time_step_test.py,TimeStepTest,test_replace,assert_false,48,self.assertFalse(ts.done)
+tensor2tensor/tensor2tensor/envs/time_step_test.py,TimeStepTest,test_replace,assert_true,53,self.assertTrue(tsr.done)
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,GymEnvProblemTest,test_setup,assert_true,60,"self.assertTrue(isinstance(action_space, Discrete))"
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,GymEnvProblemTest,test_setup,assert_false,66,self.assertFalse(ep.is_reward_range_finite)
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,GymEnvProblemTest,test_reward_range,assert_true,76,self.assertTrue(ep.is_reward_range_finite)
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,GymEnvProblemTest,test_default_processed_rewards_discrete,assert_true,89,self.assertTrue(ep.is_reward_range_finite)
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,GymEnvProblemTest,test_default_processed_rewards_discrete,assert_true,102,self.assertTrue(ep.is_processed_rewards_discrete)
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,,test_resets_properly,assert_greater,377,"self.assertGreater(env.trajectories.num_completed_trajectories, 0)"
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,,reset,assert_false,430,self.assertFalse(d[0])
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,,reset,assert_false,431,self.assertFalse(d[1])
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,,reset,assert_true,434,self.assertTrue(d[0])
+tensor2tensor/tensor2tensor/envs/gym_env_problem_test.py,,reset,assert_true,435,self.assertTrue(d[1])
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_empty_trajectory,assert_false,34,self.assertFalse(t.is_active)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_empty_trajectory,assert_false,36,self.assertFalse(t.done)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_add_time_step,assert_true,43,self.assertTrue(t.is_active)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_add_time_step,assert_true,47,self.assertTrue(added_t.done)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_change_last_time_step,assert_true,58,self.assertTrue(t.is_active)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_change_last_time_step,assert_true,66,self.assertTrue(ts.done)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,TrajectoryTest,test_change_last_time_step,assert_false,75,self.assertFalse(ts.done)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_reset_all,assert_true,214,self.assertTrue(all((t.is_active for t in bt.trajectories)))
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_reset_some,assert_true,234,self.assertTrue(all((t.is_active for t in bt.trajectories[:self.BATCH_SIZE // 2])))
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_reset_some,assert_true,236,self.assertTrue(all((not t.is_active for t in bt.trajectories[self.BATCH_SIZE // 2:])))
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_truncate,assert_true,272,self.assertTrue(all((t.is_active for t in bt.trajectories)))
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_step,assert_less_equal,304,"self.assertLessEqual(1, num_done)"
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_desired_placement_of_rewards_and_actions,assert_true,345,self.assertTrue(t.is_active)
+tensor2tensor/tensor2tensor/envs/trajectory_test.py,BatchTrajectoryTest,test_observations_np,assert_false,471,self.assertFalse(np.all(zero_obs == padded_obs_np[b][ts]))
+tensor2tensor/tensor2tensor/envs/mujoco_problems_test.py,ReacherEnvProblemTest,test_registration_and_interaction_with_env_problem,assert_greater,53,"self.assertGreater(num_done, 0)"
+tensor2tensor/tensor2tensor/envs/env_problem_utils_test.py,EnvProblemUtilsTest,policy_fun,assert_true,61,"self.assertTrue(np.all(observations[:, len_history_for_policy:, ...] == 0))"
+tensor2tensor/tensor2tensor/envs/env_problem_utils_test.py,EnvProblemUtilsTest,policy_fun,assert_false,63,"self.assertFalse(np.all(observations[:, :len_history_for_policy, ...] == 0))"
+tensor2tensor/tensor2tensor/envs/env_problem_utils_test.py,EnvProblemUtilsTest,policy_fun,assert_less_equal,89,"self.assertLessEqual(T, max_timestep)"
+tensor2tensor/tensor2tensor/envs/env_problem_utils_test.py,EnvProblemUtilsTest,policy_fun,assert_less_equal,97,"self.assertLessEqual(T, max_timestep)"
+tensor2tensor/tensor2tensor/envs/tic_tac_toe_env_test.py,TicTacToeEnvTest,test_start,assert_false,30,self.assertFalse(ttt.done)
+tensor2tensor/tensor2tensor/envs/tic_tac_toe_env_test.py,TicTacToeEnvTest,test_start,assert_greater,36,"self.assertGreater(num_open_spaces, 7)"
+tensor2tensor/tensor2tensor/envs/tic_tac_toe_env_test.py,TicTacToeEnvTest,test_start,assert_false,47,self.assertFalse(done)
+tensor2tensor/tensor2tensor/envs/tic_tac_toe_env_test.py,TicTacToeEnvTest,test_env_actions,assert_true,59,self.assertTrue(done)
+tensor2tensor/tensor2tensor/envs/tic_tac_toe_env_test.py,TicTacToeEnvTest,test_keep_playing,assert_true,78,self.assertTrue(we_won or env_won or (not space))
+tensor2tensor/tensor2tensor/envs/tic_tac_toe_env_problem_test.py,TicTacToeEnvProblemTest,test_registration_and_interaction_with_env_problem,assert_greater,66,"self.assertGreater(num_done, 0)"
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_splits_dataset,assert_true,123,self.assertTrue(env.current_epoch_rollouts(split))
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_split_preserves_number_of_rollouts,assert_greater_equal,138,"self.assertGreaterEqual(num_rollouts_after_split, num_dones + batch_size)"
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_split_preserves_number_of_rollouts,assert_less_equal,139,"self.assertLessEqual(num_rollouts_after_split, num_dones + batch_size + 1)"
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_generates_data,assert_true,165,self.assertTrue(filenames)
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_generates_data,assert_true,169,self.assertTrue(records)
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_clipping,assert_true,220,self.assertTrue(np.max(rewards) == 1)
+tensor2tensor/tensor2tensor/data_generators/gym_env_test.py,GymEnvTest,test_clipping,assert_true,221,self.assertTrue(np.min(rewards) == -1)
+tensor2tensor/tensor2tensor/data_generators/timeseries_test.py,TimeseriesTest,testTimeseriesToyProblem,assert_true,59,self.assertTrue(exhausted)
+tensor2tensor/tensor2tensor/data_generators/timeseries_test.py,TimeseriesTest,testTimeseriesToyProblemNoInputs,assert_true,86,self.assertTrue(exhausted)
+tensor2tensor/tensor2tensor/data_generators/image_utils_test.py,ImageTest,testImageGenerator,assert_allclose,69,"self.assertAllClose(decoded1, image1)"
+tensor2tensor/tensor2tensor/data_generators/image_utils_test.py,ImageTest,testImageGenerator,assert_allclose,73,"self.assertAllClose(decoded2, image2)"
+tensor2tensor/tensor2tensor/data_generators/common_voice_test.py,CommonVoiceTest,testCollectData,assert_true,38,self.assertTrue('my_media' == output[0][0])
+tensor2tensor/tensor2tensor/data_generators/common_voice_test.py,CommonVoiceTest,testCollectData,assert_true,39,self.assertTrue('my_label' == output[0][2])
+tensor2tensor/tensor2tensor/data_generators/text_encoder_test.py,SubwordTextEncoderTest,test_encode_decode,assert_true,149,self.assertTrue(alphabet.issubset(encoder._alphabet))
+tensor2tensor/tensor2tensor/data_generators/text_encoder_test.py,SubwordTextEncoderTest,test_small_vocab,assert_true,174,self.assertTrue(alphabet.issubset(encoder._alphabet))
+tensor2tensor/tensor2tensor/data_generators/text_encoder_test.py,SubwordTextEncoderTest,test_long_tokens,assert_true,209,self.assertTrue(alphabet.issubset(encoder._alphabet))
+tensor2tensor/tensor2tensor/data_generators/translate_ende_test.py,TranslateEndeTest,test_source_data_files,assert_greater,52,"self.assertGreater(len(wmt_8k_eval_files), 0)"
+tensor2tensor/tensor2tensor/data_generators/translate_ende_test.py,TranslateEndeTest,test_source_data_files,assert_greater,57,"self.assertGreater(len(wmt_8k_train_files), 0)"
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,TextProblems,testText2TextTmpDir,assert_true,171,self.assertTrue(tf.gfile.Exists(vocab_file))
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,TextProblems,testText2TextTmpDir,assert_true,172,self.assertTrue(tf.gfile.Exists(train_file))
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,TextProblems,testText2TextTmpDir,assert_true,173,self.assertTrue(tf.gfile.Exists(eval_file))
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,TextProblems,testText2TextTmpDir,assert_true,188,self.assertTrue(exhausted)
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,TextProblems,testText2TextTmpDir,assert_true,198,self.assertTrue(encoder.decode(inputs_encoded) in self.inputs)
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,TextProblems,testText2TextTmpDir,assert_true,201,self.assertTrue(encoder.decode(targets_encoded) in self.targets)
+tensor2tensor/tensor2tensor/data_generators/text_problems_test.py,DistributedText2TextProblemsTest,testVocabularyIsAllTrain,assert_true,407,"self.assertTrue('train_' in text, 'train is not in %s' % text)"
+tensor2tensor/tensor2tensor/data_generators/generator_utils_test.py,GeneratorUtilsTest,test_generator,assert_true,107,self.assertTrue(tf.gfile.Exists(tmp_file_path + '-train-00000-of-00001'))
+tensor2tensor/tensor2tensor/data_generators/generator_utils_test.py,GeneratorUtilsTest,testGetOrGenerateTxtVocab,assert_true,171,"self.assertTrue(tf.gfile.Exists(os.path.join(data_dir, 'test.voc')))"
+tensor2tensor/tensor2tensor/data_generators/generator_utils_test.py,GeneratorUtilsTest,testGetOrGenerateTxtVocab,assert_true,180,"self.assertTrue(tf.gfile.Exists(os.path.join(data_dir, 'test.voc')))"
+tensor2tensor/tensor2tensor/data_generators/problem_test.py,ProblemTest,testNoShuffleDeterministic,assert_true,70,"self.assertTrue(assert_tensors_equal(sess, tensor1, tensor2, 20))"
+tensor2tensor/tensor2tensor/data_generators/problem_test.py,ProblemTest,testNoShufflePreprocess,assert_true,87,"self.assertTrue(assert_tensors_equal(sess, tensor1, tensor2, 20))"
+tensor2tensor/tensor2tensor/data_generators/multi_problem_v2_test.py,MultiProblemV2Test,test_linear_interpolation,assert_allclose,79,"self.assertAllClose(multi_problem_v2.linear_interpolation(x, xp, fp), y)"
+tensor2tensor/tensor2tensor/data_generators/multi_problem_v2_test.py,MultiProblemV2Test,test_step_interpolation,assert_allclose,97,"self.assertAllClose(multi_problem_v2.step_interpolation(x, xp, fp), y)"
+tensor2tensor/tensor2tensor/data_generators/multi_problem_v2_test.py,MultiProblemV2Test,test_get_schedule_distribution,assert_allclose,122,"self.assertAllClose(sess.run(output), pmf)"
+tensor2tensor/tensor2tensor/data_generators/multi_problem_v2_test.py,MultiProblemV2Test,test_get_multi_dataset,assert_allclose,172,"self.assertAllClose(sess.run(sample_pmf), pmf, rtol=0.1, atol=0.1)"
+tensor2tensor/tensor2tensor/data_generators/allen_brain_test.py,TestAllenBrain,test_generator_produces_examples,assert_true,125,self.assertTrue(key in example.keys())
+tensor2tensor/tensor2tensor/data_generators/allen_brain_test.py,TestImageMock,test_image_mock_produces_expected_shape,assert_true,276,self.assertTrue(tf.gfile.Exists(output_path))
+tensor2tensor/tensor2tensor/data_generators/imagenet_test.py,ImagenetTest,testImagenetIsNormalized,assert_true,50,self.assertTrue(problem.normalize_image)
+tensor2tensor/tensor2tensor/data_generators/imagenet_test.py,ImagenetTest,testImagenetIsNormalized,assert_false,52,self.assertFalse(problem.normalize_image)
+tensor2tensor/tensor2tensor/data_generators/wikisum/utils_test.py,UtilsTest,test_filter_paragraph,assert_true,42,"self.assertTrue(utils.filter_paragraph(p), msg=""Didn't filter %s"" % p)"
+tensor2tensor/tensor2tensor/data_generators/wikisum/utils_test.py,UtilsTest,test_filter_paragraph,assert_false,47,"self.assertFalse(utils.filter_paragraph(p), msg='Filtered %s' % p)"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_rendered_env,assert_true,112,"self.assertTrue(np.allclose(np.zeros([64, 12, 3], np.uint8), obs))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_rendered_env,assert_true,117,"self.assertTrue(np.allclose(np.zeros([64, 12, 3], np.float32), obs))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_rendered_env_continuous_1d,assert_true,124,"self.assertTrue(np.allclose(np.zeros([64, 12, 3], np.uint8), obs))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_rendered_env_continuous_1d,assert_true,131,"self.assertTrue(np.allclose(np.zeros([64, 12, 3], np.float32), obs))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_rendered_env_continuous_2d,assert_true,138,"self.assertTrue(np.allclose(np.zeros([64, 12, 3], np.uint8), obs))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_rendered_env_continuous_2d,assert_true,145,"self.assertTrue(np.allclose(np.zeros([64, 12, 3], np.float32), obs))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,expected_continuous_actions,assert_array_almost_equal,211,"np.testing.assert_array_almost_equal(mock_args[1], expected_continuous_actions(discrete_action))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration,assert_true,224,"self.assertTrue(np.allclose(env.reset(), np.zeros(shape=(3, 3), dtype=np.uint8)))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration,assert_true,228,self.assertTrue(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_continuous,assert_true,241,"self.assertTrue(np.allclose(env.reset(), np.zeros(shape=(3, 3), dtype=np.uint8)))"
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_continuous,assert_true,245,self.assertTrue(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_with_kwargs,assert_false,259,self.assertFalse(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_with_kwargs,assert_false,262,self.assertFalse(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_with_kwargs,assert_true,265,self.assertTrue(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_with_kwargs,assert_false,280,self.assertFalse(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_with_kwargs,assert_false,283,self.assertFalse(done)
+tensor2tensor/tensor2tensor/rl/gym_utils_test.py,GymUtilsTest,test_gym_registration_with_kwargs,assert_true,286,self.assertTrue(done)
+tensor2tensor/tensor2tensor/rl/batch_dqn_agent_test.py,,testBeginEpisode,assert_true,123,self.assertTrue((agent.begin_episode(first_observation) == 0).all())
+tensor2tensor/tensor2tensor/rl/restarter_test.py,RestarterTest,assert_first_run,assert_false,52,self.assertFalse(restarter.should_skip)
+tensor2tensor/tensor2tensor/rl/restarter_test.py,RestarterTest,assert_first_run,assert_false,53,self.assertFalse(restarter.restarting)
+tensor2tensor/tensor2tensor/rl/restarter_test.py,RestarterTest,test_skips_already_done,assert_true,95,self.assertTrue(restarter.should_skip)
+tensor2tensor/tensor2tensor/rl/restarter_test.py,RestarterTest,test_restarts_after_interruption,assert_false,118,self.assertFalse(restarter.should_skip)
+tensor2tensor/tensor2tensor/rl/restarter_test.py,RestarterTest,test_restarts_after_interruption,assert_true,119,self.assertTrue(restarter.restarting)

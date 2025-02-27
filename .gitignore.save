@@ -61,10 +61,18 @@ cache_data_*
 cache_mapping_*
 *.json
 *.lockvenv/
-#task1results/
-#task2results/
-#task3results/
+task1results/
+task2results/
+task3results/
 tensor2tensor/
 sonnet/
 
 venv/
+task1results/
+task2results/
+task3results/
+tensor2tensor/
+sonnet/
+^X
+X
+

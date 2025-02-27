@@ -1,0 +1,45 @@
+Test: test_dropout_version_is_different_to_no_dropout
+Average Execution Time: 20.5326 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_attention_is_normalised_correctly
+Average Execution Time: 17.4723 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_attention_from_pretrained
+Average Execution Time: 24.9740 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_mask_works
+Average Execution Time: 16.1433 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_as_tensor_handles_words
+Average Execution Time: 16.9261 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_as_tensor_can_handle_multiple_token_indexers_and_empty_fields
+Average Execution Time: 18.1743 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_pass_through_encoder_with_mask
+Average Execution Time: 16.8176 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_exponential_moving_average_without_steps
+Average Execution Time: 17.2030 sec
+Flaky: No
+KS Statistic: nan
+
+Test: test_block_is_orthogonal
+Average Execution Time: 16.9711 sec
+Flaky: No
+KS Statistic: nan
+
